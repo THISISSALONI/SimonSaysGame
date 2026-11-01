@@ -1,0 +1,41 @@
+.box{
+    height: 300px;
+    width: 300px;
+    margin: auto;
+    text-align: center;
+    display: flex;
+    flex-wrap: wrap;
+}
+.box div{
+ height: 120px;
+ width: 120px;
+ border: 6px solid black;
+ border-radius: 20%;
+ margin: auto;
+ margin-bottom: 10px;
+}
+h2, h4{
+    text-align: center;
+    margin: auto;
+    margin-bottom: 10px;
+}
+
+.pink{
+    background-color: palevioletred;
+}
+.red{
+    background-color: red;
+}
+.blue{
+    background-color: blue;
+}
+.green{
+    background-color: green;
+}
+
+.gameflash{
+    background-color: white;
+}
+.userflash{
+    background-color: green;
+}
