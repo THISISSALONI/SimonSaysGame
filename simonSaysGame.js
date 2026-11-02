@@ -47,12 +47,14 @@ function checkAns(idx){
             setTimeout(levelUp, 1000);
         }
     }else{
-        h4.innerHTML = `Game Over! <b> Your score is: ${level}</b> 
+        h4.innerHTML = `Game Over! <b> Your current score is: ${level}</b> 
         <br> Press any key to start again!`;
         document.querySelector("body").style.backgroundColor = "red"
         setTimeout(function(){
             document.querySelector("body").style.backgroundColor = "white"
         },200);
+        
+        checkHighestScore(level);
         reset();
     }
 }
@@ -68,6 +70,16 @@ checkAns(userSeq.length-1);
 let allbtn = document.querySelectorAll(".button");
 for (let btn of allbtn) {
     btn.addEventListener("click", btnpress);
+}
+
+let h3 = document.querySelector("h3");
+let prevScore = 0;
+function checkHighestScore(level){
+let currScore = level;
+if(prevScore < currScore){
+    prevScore = currScore;
+ h3.innerText = `Highest score: ${currScore}`;
+}  
 }
 function reset(){
     userSeq = [];
